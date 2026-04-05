@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StudentRegistrationApp</string>
+
+    <string-array name="spinner_countries">
+        <item>Bangladesh</item>
+        <item>India</item>
+        <item>USA</item>
+        <item>UK</item>
+        <item>Canada</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew assembleDebug)",
+      "Bash(JAVA_HOME=\"C:/Program Files/Android/Android Studio/jbr\" ./gradlew assembleDebug)",
+      "Bash(cmd /c \"dir \\\\\"C:\\\\Program Files\\\\Android\\\\\" /b 2>nul\")",
+      "Bash(cmd /c \"where java 2>nul\")",
+      "Bash(cmd /c \"dir \\\\\"C:\\\\Program Files\\\\\" /b\")",
+      "Read(//c//**)",
+      "Read(//e//**)"
+    ]
+  }
+}

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- APP TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Grade Report"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryBlue"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/primaryBlue"
+            android:layout_marginBottom="12dp" />
+
+        <!-- STUDENT INFO SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/sectionBg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STUDENT INFORMATION"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryBlue"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/labelText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=": Rezwoan Faisal"
+                    android:textColor="@color/valueText"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Student ID"
+                    android:textStyle="bold"
+                    android:textColor="@color/labelText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=": 23-51712-2"
+                    android:textColor="@color/valueText"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Semester"
+                    android:textStyle="bold"
+                    android:textColor="@color/labelText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=": Spring 2025-26"
+                    android:textColor="@color/valueText"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Department"
+                    android:textStyle="bold"
+                    android:textColor="@color/labelText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=": Computer Science &amp; Engineering"
+                    android:textColor="@color/valueText"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- GRADE TABLE -->
+        <TableLayout
+            android:id="@+id/gradeTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginBottom="12dp"
+            android:background="@color/sectionBg">
+
+            <!-- HEADER ROW -->
+            <TableRow android:background="@color/primaryBlue">
+
+                <TextView
+                    android:text="Subject"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="Obtained"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:text="Grade"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <!-- Subject rows are inserted here programmatically -->
+
+            <!-- SUMMARY ROW -->
+            <TableRow
+                android:id="@+id/summaryRow"
+                android:background="@color/summaryBg">
+
+                <TextView
+                    android:id="@+id/tvSummary"
+                    android:layout_span="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total: 0  |  Passed: 0  |  Failed: 0"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryBlue"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="13sp" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- GPA DISPLAY -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/deepBlue"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUMULATIVE GPA"
+                android:textSize="12sp"
+                android:textColor="@color/lightBlue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="out of 4.00"
+                android:textSize="12sp"
+                android:textColor="@color/lightBlue" />
+        </LinearLayout>
+
+        <!-- ADD SUBJECT SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/sectionBg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD NEW SUBJECT"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryBlue"
+                android:paddingBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etSubjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject Name"
+                android:inputType="textCapWords"
+                android:layout_marginBottom="8dp"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/etObtainedMarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Marks Obtained"
+                    android:inputType="number"
+                    android:layout_marginEnd="8dp"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/etTotalMarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Total Marks"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Subject"
+                android:backgroundTint="@color/primaryBlue"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- PRINT / SHARE BUTTON -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print / Share Report"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

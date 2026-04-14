@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="appBackground">#F0F4F8</color>
+    <color name="primaryBlue">#1565C0</color>
+    <color name="deepBlue">#0D47A1</color>
+    <color name="lightBlue">#90CAF9</color>
+    <color name="summaryBg">#E3F2FD</color>
+
+    <color name="passRowEven">#E8F5E9</color>
+    <color name="passRowOdd">#C8E6C9</color>
+    <color name="failRowEven">#FFEBEE</color>
+    <color name="failRowOdd">#FFCDD2</color>
+
+    <color name="passTextColor">#1B5E20</color>
+    <color name="failTextColor">#B71C1C</color>
+
+    <color name="sectionBg">#FFFFFF</color>
+    <color name="labelText">#424242</color>
+    <color name="valueText">#616161</color>
+    <color name="cellText">#212121</color>
+</resources>

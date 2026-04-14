@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:elevation="4dp"
+        android:background="?attr/colorSurface">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="The Daily Reader"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_bookmark_border"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bookmark"/>
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Share"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="#BDBDBD"
+                    android:contentDescription="Article header image"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TECHNOLOGY"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_category_tag"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Rise of Artificial Intelligence: How Machines Are Reshaping Our World"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Author avatar"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sarah Mitchell"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="April 14, 2026"
+                        android:textSize="12sp"
+                        android:textColor="#757575"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="12dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+                        <Button
+                            android:id="@+id/btnNavIntro"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Introduction"
+                            android:layout_marginEnd="8dp"/>
+                        <Button
+                            android:id="@+id/btnNavKeyPoints"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Key Points"
+                            android:layout_marginEnd="8dp"/>
+                        <Button
+                            android:id="@+id/btnNavAnalysis"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Analysis"
+                            android:layout_marginEnd="8dp"/>
+                        <Button
+                            android:id="@+id/btnNavConclusion"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Conclusion"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/sectionIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Introduction"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The rapid advancement of artificial intelligence has fundamentally transformed the way we interact with technology in our daily lives. From voice assistants that understand natural language to recommendation algorithms that predict our preferences, AI has quietly embedded itself into the fabric of modern society. This article explores the profound impact of AI on various sectors including healthcare, education, transportation, and entertainment. We examine how machine learning algorithms are enabling doctors to diagnose diseases with greater accuracy, how personalized learning platforms are revolutionizing education by adapting to individual student needs, and how autonomous vehicles are poised to reshape urban mobility. The convergence of big data, increased computing power, and sophisticated neural networks has accelerated AI development at an unprecedented pace. As we stand at this technological inflection point, understanding both the remarkable opportunities and significant challenges that artificial intelligence presents has become crucial for every citizen, policymaker, business leader, and technologist navigating the twenty-first century landscape."
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionKeyPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Key Points"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Several critical observations emerge from analyzing artificial intelligence trends across industries. First, AI adoption is accelerating exponentially across all major economic sectors, with global investment in AI technologies surpassing 150 billion dollars in 2023 alone. Second, the democratization of AI tools through cloud platforms has enabled small businesses and startups to leverage capabilities previously reserved for large corporations with dedicated research teams. Third, natural language processing has advanced dramatically, with large language models demonstrating remarkable reasoning abilities that were considered impossible just five years ago. Fourth, AI-driven automation is creating both displacement and opportunity in the labor market, requiring significant workforce reskilling across virtually every professional domain. Fifth, ethical concerns surrounding algorithmic bias, privacy violations, and lack of transparency in decision-making systems demand urgent regulatory attention and industry self-governance. Sixth, countries are increasingly viewing AI supremacy as a matter of national security and economic competitiveness, triggering a global technological arms race with profound geopolitical implications for the decades ahead."
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionAnalysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Analysis"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A deeper examination of artificial intelligence reveals complex patterns that challenge simple narratives of either utopian progress or dystopian collapse. The economic analysis shows that while AI automation displaces certain routine tasks, it simultaneously creates demand for new skills and entirely new categories of work that did not previously exist. Historical precedent from previous technological revolutions, including industrialization and computerization, suggests that short-term disruption typically yields long-term productivity gains and improved living standards across populations. However, the pace of current AI advancement appears qualitatively different, with capabilities evolving faster than regulatory frameworks and social institutions can adapt. Healthcare applications demonstrate particularly promising outcomes, with AI diagnostic tools achieving accuracy rates that match or exceed specialist physicians in radiology, dermatology, and ophthalmology. The environmental impact presents another dimension requiring careful consideration, as training large AI models consumes enormous amounts of electricity, potentially offsetting efficiency gains achieved through AI-optimized industrial processes and smart grid management systems worldwide."
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/sectionConclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Conclusion"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The trajectory of artificial intelligence development presents humanity with choices that will define the coming decades. Technology alone does not determine outcomes; rather, the decisions made by governments, corporations, researchers, and individual citizens about how to develop, deploy, and govern AI systems will shape whether this technological revolution delivers broadly shared benefits or concentrated advantages. Responsible AI development requires investment in robust safety research, transparent governance frameworks, inclusive design processes that center diverse perspectives, and educational systems that prepare people for a world where collaboration between humans and intelligent machines becomes standard practice. The challenge is not simply technical but fundamentally social, economic, and ethical. By approaching artificial intelligence with both ambition and wisdom, embracing its transformative potential while carefully managing associated risks, societies can harness this powerful technology to address humanity\'s greatest challenges including climate change, disease, poverty, and inequality. The future of AI is not predetermined; it will be built through the choices we make together starting today."
+                    android:textSize="13sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tags:"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="8dp"/>
+                    <HorizontalScrollView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AI"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Technology"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Machine Learning"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Innovation"
+                                android:layout_marginEnd="4dp"/>
+                            <Button
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Future"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Related Articles"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="How Machine Learning Is Revolutionizing Healthcare Diagnostics"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="The Ethical Challenges of Deploying AI in Public Decision-Making"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_related_card"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="8dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#BDBDBD"
+                        android:contentDescription="Article thumbnail"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Autonomous Vehicles: The Road Ahead for Self-Driving Technology"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btnBackToTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑ Top"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

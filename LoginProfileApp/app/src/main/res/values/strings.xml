@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LoginProfileApp</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="profile_name">Admin User</string>
+    <string name="profile_email">admin@loginprofile.com</string>
+    <string name="profile_bio">Android Developer | Tech Enthusiast | Coffee Lover</string>
+    <string name="app_logo_desc">App Logo</string>
+    <string name="avatar_desc">User Avatar</string>
+</resources>

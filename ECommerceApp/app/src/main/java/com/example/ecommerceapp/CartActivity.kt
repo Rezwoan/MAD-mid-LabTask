@@ -24,7 +24,9 @@ class CartActivity : AppCompatActivity() {
         val tvTotal = findViewById<TextView>(R.id.tvTotal)
         val btnCheckout = findViewById<Button>(R.id.btnCheckout)
 
-        val cartItems = CartManager.cartItems
+        @Suppress("UNCHECKED_CAST")
+        val cartItems = intent.getSerializableExtra("CART_ITEMS") as? ArrayList<Product> ?: arrayListOf()
+        
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CartAdapter(cartItems)
 

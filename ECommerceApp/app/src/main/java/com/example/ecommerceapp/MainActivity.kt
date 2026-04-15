@@ -134,18 +134,13 @@ class MainActivity : AppCompatActivity() {
         val idx = allProducts.indexOfFirst { it.id == product.id }
         if (idx == -1) return
         allProducts[idx].inCart = !allProducts[idx].inCart
-        if (allProducts[idx].inCart) {
-            CartManager.cartItems.add(allProducts[idx])
-        } else {
-            CartManager.cartItems.removeAll { it.id == product.id }
-        }
         applyFilter()
         updateCartBadge()
     }
 
     fun updateCartBadge() {
         if (!::cartBadge.isInitialized) return
-        val count = CartManager.cartItems.size
+        val count = allProducts.count { it.inCart }
         cartBadge.isVisible = count > 0
         if (count > 0) cartBadge.number = count
     }
@@ -170,7 +165,6 @@ class MainActivity : AppCompatActivity() {
                 val allIdx = allProducts.indexOfFirst { it.id == removed.id }
                 if (allIdx != -1) allProducts.removeAt(allIdx)
                 if (removed.inCart) {
-                    CartManager.cartItems.removeAll { it.id == removed.id }
                     updateCartBadge()
                 }
                 updateEmptyState()
@@ -179,7 +173,6 @@ class MainActivity : AppCompatActivity() {
                         val insertIdx = if (allIdx != -1) allIdx.coerceAtMost(allProducts.size) else allProducts.size
                         allProducts.add(insertIdx, removed)
                         if (removed.inCart) {
-                            CartManager.cartItems.add(removed)
                             updateCartBadge()
                         }
                         applyFilter()
@@ -218,7 +211,10 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_cart -> {
-                startActivity(Intent(this, CartActivity::class.java))
+                val intent = Intent(this, CartActivity::class.java)
+                val cartItems = ArrayList(allProducts.filter { it.inCart })
+                intent.putExtra("CART_ITEMS", cartItems)
+                startActivity(intent)
                 true
             }
             R.id.action_toggle_view -> {
